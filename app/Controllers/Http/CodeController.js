@@ -17,6 +17,9 @@ class CodeController {
         let barcode = await Code.create(options, format);
         return response.send(barcode);
     }    
+    async show({request, response, view}) {
+        return view.render('code.show')
+    }
 }
 
 module.exports = CodeController

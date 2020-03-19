@@ -19,3 +19,4 @@ const Route = use('Route')
 Route.on('/').render('welcome')
 
 Route.get('code/:text\.:format', 'CodeController.create')
+Route.get('code', 'CodeController.show')

@@ -1,0 +1,26 @@
+<nav class="navbar">
+  <div class="navbar-start">
+    <div class="navbar-item notification" id="notification">
+      Ready
+    </div>
+  </div>    
+
+  <div class="navbar-end">
+    <a class="navbar-item">
+      2020.02.27
+    </a>
+  </div>
+</nav>
+
+<script>
+  function notify(code, message, callback){
+    let divNotification = document.getElementById("notification");
+    divNotification.innerText = message;
+    divNotification.classList.add('is-' + code);
+    setTimeout(()=>{
+      divNotification.innerText = "Ready";
+      divNotification.classList.remove('is-' + code);
+      if (callback) callback();
+    }, 2000);
+  }
+</script>
