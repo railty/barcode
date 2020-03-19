@@ -3,7 +3,7 @@ const bwipjs = require('bwip-js');
 const drawsvg = require('./drawing-svg');
 
 class Code {
-    static async createSvg(opts, format) {
+    static async create(opts, format) {
         if (format == "svg"){
             bwipjs.fixupOptions(opts);
             let svg = bwipjs.render(opts, drawsvg(opts, bwipjs.FontLib));

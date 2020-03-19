@@ -14,7 +14,7 @@ class CodeController {
             response.header('Content-type', 'image/png')
         }
 
-        let barcode = await Code.createSvg(options, format);
+        let barcode = await Code.create(options, format);
         return response.send(barcode);
     }    
 }
